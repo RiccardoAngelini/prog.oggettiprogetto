@@ -22,16 +22,28 @@ import com.example.demoSpring.Model.Place;
 import com.example.demoSpring.Utility.DateParse;
 import com.example.demoSpring.Utility.UrlGenerator;
 
+/**
+ * La seguente classe implementa l'interfaccia TweetService
+ * @author Riccardo Angelini
+ * @author Leonardo Di Pietro
+ * 
+ */
+
 public class TweetServiceImpl implements TweetService {
 
+	/**
+	 * Attributi di di TweetServiceImpl : url , geolocal, location	
+	 */
 	private  String url= "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json?"; 
 	Vector<GeoTweet> geolocal = new Vector<GeoTweet>();
 	Vector<Place> location= new Vector <Place>();
 	
-	
-	//questo metodo legge il riga per riga il jsonobject in questione, 
-	//dopodichè prende le informazioni rilevanti al suo interno e le salva nei campi del generictweet.
-
+	/**
+	 * Il metodo in questione legge riga per riga il JSON che espone tutti i dati di un tweet,
+	 * successivamente prende le informazioni rilevanti e le salva nei vari campi del generictweet
+	 * 
+	 * @return il generictweet con i nuovi valori 
+	 */
 
 	@SuppressWarnings("unused")
 	@Override
@@ -125,8 +137,10 @@ public class TweetServiceImpl implements TweetService {
 
 
 
-	//questo metodo riceve come parametro il geotweet "aggiornato" e restituisce il json rilevante.
-
+	/**
+	 * Il metodo riceve come parametro il generictweet "aggiornato" e costruisce un nuovo JSONObject
+	 * @return il nuovo JSONObject con i dati di tweet rilevanti
+	 */
 
 
 	@SuppressWarnings("unchecked")
