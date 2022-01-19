@@ -5,25 +5,36 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Vector;
+/**
+ * GetCoordinates prende le coordinate di una città in input
+ * @author RiccardoAngelini
+ * @author LeonardoDiPietro
+ *
+ */
 
 public class GetCoordinates {
+	/**
+	 * Attributi di GetCoordinates: city,coord,input 
+	 */
 	
-	private Vector<String> city;
-	private Vector<String> coord;
-	/*
+	private Vector<String> city=new Vector<String>();
+	private Vector<String> coord= new Vector<String>();
+	private String input;
 	
-	public GetCoordinates(Vector<String> city, Vector<String> coord) {
-		super();
-		this.city = city;
-		this.coord = coord;
+	/**
+	 * Costruttore
+	 */
+	public GetCoordinates(String input) {
+		this.input=input;
 	}
 	
-	*/
 	
-	// Legge un fil riga per riga contenente alcune città italiane con le loro coordinate 
-	// e le assegna a due vettori paralleli , dopodiche restituisce le coordinate della citta inserita
-	
-	public String getCoordinates(String input) {
+	/**
+	 * Questo metodo il file city.txt contenente alcune città italiane con le loro coordinate 
+	 * e le assegna a due vettori paralleli, dopodichà restituisce le coordinate della città inserita
+	 * @return Ritorna le coordinate(latitudine e longitudine) sotto froma di stringa
+	 */
+	public String getCoordinates() {
 		
 		try {
 		Scanner file_input = new Scanner(new BufferedReader(new FileReader("city.txt"))); 

@@ -10,22 +10,35 @@ import com.example.demoSpring.Model.GenericTweet;
 import com.example.demoSpring.Model.GeoTweet;
 import com.example.demoSpring.Service.TweetServiceImpl;
 
+/**
+ * La seguente classe implementa l'interfaccia Filter
+ * @author Riccardo Angelini
+ * @author Leonardo Di Pietro
+ *
+ */
+
 public class Dayfilter implements Filter{
-    
+    /**
+     * Attributi: generictweet, date
+     */
+	
     GenericTweet generictweet;
 	LocalDate date; 
 	
+	/**
+	 * Costruttore
+	 * @param generictweet
+	 * @param date
+	 */
 	public Dayfilter(GenericTweet generictweet,LocalDate date) {
 		this.generictweet=generictweet;
 		this.date=date;
 	}
 
-    
-    //getFilter prende in input il generictweet di readJSON   
-    //filtra i tweet in base alla dat inserita
-    // ad esempio far restituire quanti tweet vengono fatti in una data città
-    
-    
+    /** 
+     * Il metodo filtra i tweet in base alla data inserita
+     * @return ritorna il JSONObject filtrato
+     */
 	@Override
 	public JSONObject getFilter() throws DataException {
 		// TODO Auto-generated method stub

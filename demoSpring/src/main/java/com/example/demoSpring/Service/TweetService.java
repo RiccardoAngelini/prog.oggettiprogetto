@@ -7,10 +7,10 @@ import com.example.demoSpring.Model.GeoTweet;
 import com.example.demoSpring.Utility.UrlGenerator; 
 
 /**
- * La seguente classe espone i dati relativi al geo di twitter
+ * Interfaccia che viene utilizzata ai fini della chiamata e per restituire i dati dei tweet
+ * contiene due metodi astratti: readJSON e buildJSON
  * @author Riccardo Angelini
  * @author Leonardo Di Pietro
- * 
 */
 
 
@@ -20,7 +20,7 @@ public interface TweetService {
 	 * Metodo che legge il JSON
 	 * @return GenericTweet 
 	 */
-public abstract GenericTweet readJSON(); 
+public abstract GenericTweet readJSON(String url); 
 
 /**
  * Il metodo prende il GenericTweet e costruisce un JSONObject

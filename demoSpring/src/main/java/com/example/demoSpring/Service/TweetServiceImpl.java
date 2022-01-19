@@ -34,12 +34,13 @@ public class TweetServiceImpl implements TweetService {
 	/**
 	 * Attributi di di TweetServiceImpl : url , geolocal, location	
 	 */
-	private  String url= "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json?"; 
+	 
 	Vector<GeoTweet> geolocal = new Vector<GeoTweet>();
 	Vector<Place> location= new Vector <Place>();
 	
 	/**
 	 * Il metodo in questione legge riga per riga il JSON che espone tutti i dati di un tweet,
+	 * dove la string url indica la chiamata api,
 	 * successivamente prende le informazioni rilevanti e le salva nei vari campi del generictweet
 	 * 
 	 * @return il generictweet con i nuovi valori 
@@ -47,7 +48,7 @@ public class TweetServiceImpl implements TweetService {
 
 	@SuppressWarnings("unused")
 	@Override
-	public GenericTweet readJSON() {
+	public GenericTweet readJSON(String url) {
 		JSONObject obj= new JSONObject();
 
 		try {
@@ -104,14 +105,14 @@ public class TweetServiceImpl implements TweetService {
 		generictweet.setText((String)statuses.get("text"));
 
 
-
-		//for(int i=0; i<list.size(); i++) {
-		//JSONObject listelement= (JSONObject) list.get(i); 
-
 		JSONArray listelement= (JSONArray) obj.get("place");  
+		//for(int i=0; listelement.size(); i++)
+		//JSONObject place= (JSONObject) listelement.get(i);
+		//vedere se è meglio far partire un for
+		
 		JSONObject place=new JSONObject(); 
 
-		//Profile avatar = new Profile(); 
+		 
 		Place pp= new Place ();  
 
 		pp.setName((String)place.get("name"));
@@ -185,8 +186,7 @@ public class TweetServiceImpl implements TweetService {
 		
         	
         JSONObject geo = new JSONObject(); 
-		//GeoTweet geotweet = new GeoTweet();
-
+		
 		geo.put("coordinates", geotweet.getCoord()); 
 		geo.put("type", geotweet.getType()); 
 
