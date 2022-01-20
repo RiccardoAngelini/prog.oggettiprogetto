@@ -22,7 +22,7 @@ public class Placefilter implements Filter{
 	/**
 	 * Attributi: generictweet,place
 	 */
-	GenericTweet generictweet;
+	GenericTweet generictweet= new GenericTweet();
 	String place;
 	/**
 	 * Costruttore 

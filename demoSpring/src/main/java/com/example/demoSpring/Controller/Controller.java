@@ -24,6 +24,13 @@ import com.example.demoSpring.Utility.Distance;
 import com.example.demoSpring.Utility.GetCoordinates;
 import com.example.demoSpring.Utility.UrlGenerator;
 
+/**
+ * Controller che gestisce le chiamate 
+ * @author RiccardoAngelini
+ * @author LeonardoDiPietro
+ *
+ */
+
 @RestController
 public class Controller {
 
@@ -42,7 +49,8 @@ private TweetService tweetService;
       
 	  return new ResponseEntity<>(distanza.findDistance(geo.getCoord()),HttpStatus.OK);
 	}
-	  
+	
+	/*
 	@GetMapping(value="/number")
 	public ResponseEntity<Objects> getNumberofTweet(){
     
@@ -66,9 +74,13 @@ private TweetService tweetService;
     ConfrontotradueLocation confrontotraduelocation=new ConfrontotradueLocation(numerotweet1,numerotweet2);
 	return new ResponseEntity<>(confrontotraduelocation.trovailmaxeilmin(numerotweet1.findnumberofTweet(tweet.readJSON(url.craeteUrl("Firenze", 2, null))),numerotweet2.findnumberofTweet(tweet.readJSON(url.craeteUrl("Napoli", 1, null )))));
     }
-  
+  */
 
      
+    /**
+     * GET che prende i metadati
+     * @return ritorna i dati importanti dei tweet
+     */
       @GetMapping(value = "/metadati")
       public ResponseEntity<Object> metadata() {
     	  TweetServiceImpl tweet= new TweetServiceImpl();
@@ -109,9 +121,16 @@ private TweetService tweetService;
 }
     
     
+
+    /**
+     * GET che permette il filtraggio del luogo
+     * @param place il luogo sul quale si vuole effettuare il filtraggio
+     * @return ritorna il JSONObject contenente i tweet filtrati
+     * @throws PlaceException
+     */
     @GetMapping(value = "/filter/place")
-    public ResponseEntity<Object> geofilter(
-    		@RequestParam(name = "location") String loc) throws PlaceException
+    public ResponseEntity<Object> placefilter(
+    		@RequestParam(name = "place") String place) throws PlaceException
     {
     	TweetServiceImpl tweet= new TweetServiceImpl();
         UrlGenerator url = new UrlGenerator();

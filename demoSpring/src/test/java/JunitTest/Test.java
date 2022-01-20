@@ -20,7 +20,7 @@ class Test {
 	
 	public void setUp() throws Exception,PlaceException{
 		tweet= new GenericTweet();
-		url= new UrlGenerator("https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json?");
+		url= new UrlGenerator();
 	}
 	
 	//Metodo per distruggere quanto inzializzato
@@ -29,7 +29,7 @@ class Test {
 	
 	@org.junit.jupiter.api.Test
 	 void testUrlGenerator() {
-		assertEquals(url.craeteUrl("Roma", 2, "it"), "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json?q=Roma&count=2&lang=it");	
+		assertEquals(url.craeteUrl("Roma", 2, "#travel"), "https://wd4hfxnxxa.execute-api.us-east-2.amazonaws.com/dev/api/1.1/search/tweets.json?q=Roma&count=2&q=#travel");	
 	}
 	
 
@@ -46,9 +46,9 @@ class Test {
 
 	
 	
-}
+
 	
-	/*
+	
 	@org.junit.jupiter.api.Test
 	void testPlaceException() {
 	try{
@@ -56,5 +56,5 @@ class Test {
 		fail("Deve generare una eccezione");
 		}catch(PlaceException p) {}	
 		}
-*/
+}
 

@@ -22,7 +22,7 @@ public class Dayfilter implements Filter{
      * Attributi: generictweet, date
      */
 	
-    GenericTweet generictweet;
+    GenericTweet generictweet= new GenericTweet();
 	LocalDate date; 
 	
 	/**
