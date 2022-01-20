@@ -58,23 +58,11 @@ private TweetService tweetService;
     UrlGenerator url = new UrlGenerator();
     GeoTweet geo = new GeoTweet();
     NumeriTweet numerotweet=new NumeriTweet(geo.getCoord());
-   return new ResponseEntity<>(numerotweet.findnumberofTweet(tweet.readJSON(url.craeteUrl(null, 2, null))));
+    distanza=distanza.findDistance(geo.getCoord());
+    		   return  ResponseEntity.OK(distanza);
 	}
-
-	
-    @GetMapping(value="/maxemin")
-	public ResponseEntity<Objects> getMaxorMin(){
-    GetCoordinates coord1 = new GetCoordinates("Firenze"); 
-    GetCoordinates coord2 = new GetCoordinates("Napoli"); 
-    NumeriTweet numerotweet1 = new NumeriTweet(coord1.getCoordinates());
-    NumeriTweet numerotweet2 = new NumeriTweet(coord2.getCoordinates());
-    TweetServiceImpl tweet= new TweetServiceImpl();
-    UrlGenerator url = new UrlGenerator();
-    
-    ConfrontotradueLocation confrontotraduelocation=new ConfrontotradueLocation(numerotweet1,numerotweet2);
-	return new ResponseEntity<>(confrontotraduelocation.trovailmaxeilmin(numerotweet1.findnumberofTweet(tweet.readJSON(url.craeteUrl("Firenze", 2, null))),numerotweet2.findnumberofTweet(tweet.readJSON(url.craeteUrl("Napoli", 1, null )))));
-    }
-  */
+	*/
+   
 
      
     /**

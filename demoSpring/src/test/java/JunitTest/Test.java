@@ -14,12 +14,12 @@ import junit.framework.TestSuite;
 
 class Test {
 	
-	private GenericTweet tweet;
+	
 	private UrlGenerator url;
 	
 	
 	public void setUp() throws Exception,PlaceException{
-		tweet= new GenericTweet();
+		
 		url= new UrlGenerator();
 	}
 	
@@ -44,10 +44,7 @@ class Test {
 	}
 	
 
-	
-	
 
-	
 	
 	@org.junit.jupiter.api.Test
 	void testPlaceException() {
