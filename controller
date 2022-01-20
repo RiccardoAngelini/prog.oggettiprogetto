@@ -1,0 +1,31 @@
+package com.example.demoSpring.Controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Controller {
+@Autowired
+TweetService tweetService;
+tweetService.buildJSON(genericTweet);
+
+   @GetMapping
+
+	//@AutoWired
+	@GetMapping(value="/distance")
+    public ReponseEntity<Object> getDistance (
+      Distance distanza=new Distance();
+	  return new ResponseEntity<>(distanza.findDistance(),HTTP Status.OK);
+	)
+	@GetMapping(value="/number")
+	public ResponseEntity<Objects> getNumberofTweet()
+    numeriTweet numerotweet=new numeriTweet();
+   return new ResponseEntity<>(numerotweet.findnumberofTweet());
+
+    @GetMapping(value="/maxemin")
+	public RespondeEntity<Objects> getMaxorMin()
+    confrontotradueLocation confrontotraduelocation=new confrontotradueLocation();
+	return new ResponseEntity<>(confrontotraduelocation.trovailmaxeilmin())
+
+   
+
+}
