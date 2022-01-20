@@ -1,6 +1,6 @@
 PROGETTO PROGRAMMAZIONE AD OGGETTI 2021-2022
 
-ANGELINI RICCARDO-LEONARDO DI PIETRO
+
 ____________________________________________
 Applicazione Java che utilizza API di twitter per ottenere informazioni sui tweet ed in particolare per effettuare statistiche sui dati geo e filtrare i tweet in base ad una data o un luogo.
 L'applicazione si basa su un API proxy fornita dal professore che potrà essere utilizzata solo ai fini del progetto
@@ -17,7 +17,7 @@ ____________________________________________
 
 METADATI
 
-
+![GEO txt - Blocco note 20_01_2022 20_50_45](https://user-images.githubusercontent.com/95302843/150414125-ff6d613d-3b85-442e-afa5-8e07131a319d.png)
 
 
 
