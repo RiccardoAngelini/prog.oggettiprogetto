@@ -1,0 +1,4 @@
+	GetCoordinates coord= new GetCoordinates("Roma");
+    Distance distanza=new Distance(coord.getCoordinates());
+    return new ResponseEntity<>(distanza.findDistance(geo.getCord()),HttpStatus.OK)
+	}
