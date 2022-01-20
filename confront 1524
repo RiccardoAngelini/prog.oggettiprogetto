@@ -1,0 +1,17 @@
+public class confrontotradueLocation {
+    numeriTweet location1;
+    numeriTweet location2;
+    String input;
+    public confrontotradueLocation(numeriTweet location1,numeriTweet location2){
+        this.location1=location1;
+        this.location2=location2;
+    }
+    //il seguente metodo serve a confontare due oggetti della classe numeritweet per sapere prendendo due location diverse e prendendo il percorso con un punto fisso verso quale location trovi più tweet
+    public numeriTweet trovailmaxeilmin (numeriTweet location1,numeriTweet location2){
+        if(location1.findnumberofTweet(location1.generictweet,input)> location2.findnumberofTweet(location2.generictweet,input)){
+        return location1;
+        }
+        else
+            return location2;
+    }
+    }
