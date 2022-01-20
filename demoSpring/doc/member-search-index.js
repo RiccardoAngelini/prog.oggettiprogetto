@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.example.demoSpring.Utility","c":"Distance","l":"Distance(String)","u":"%3Cinit%3E(java.lang.String)"},{"p":"com.example.demoSpring.Utility","c":"Distance","l":"findDistance(String)","u":"findDistance(java.lang.String)"}];updateSearchResults();

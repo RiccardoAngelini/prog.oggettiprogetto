@@ -9,6 +9,9 @@ package com.example.demoSpring.Utility;
 public class Distance {
 
 
+	 /**
+	  * Attributi: input,latitude1,longitude1,latitude2,longitude2,coord
+	  */
    private String input;
    private String latitude1;
    private String longitude1;
@@ -16,6 +19,10 @@ public class Distance {
    private String longitude2;
    private String cords;
 
+   /**
+    * Costruttore
+    * @param cords Stringa che prende le coordinate
+    */
     public Distance(String cords )
     {
     this.cords=cords;
