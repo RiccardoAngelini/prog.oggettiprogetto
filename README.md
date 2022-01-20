@@ -11,8 +11,6 @@ ROTTE DELL'APPLICAZIONE         DESCRIZIONE
 -GET /filter/created_at         RESTITUISCE UN JSONOBJECT CONTENENTE I DATI DEL TWEET NEL GIORNO INSERITO
 -GET /filter/place              RESTITUISCE UN JSONOBJECT CONTENENTE I DATI DEL TWEET NEL LUOGO INSERITO 
 -GET /distance                  RESTITUISCE LA DISTANZA 
--GET /number                    RESTITUISCE IL NUMERO DI TWEET
--GET /maxemin                   RESTITUISCE
 ____________________________________________
 
 METADATI
