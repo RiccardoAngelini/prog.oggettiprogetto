@@ -11,8 +11,8 @@ ROTTE DELL'APPLICAZIONE         DESCRIZIONE
 -GET /filter/created_at         RESTITUISCE UN JSONOBJECT CONTENENTE I DATI DEL TWEET NEL GIORNO INSERITO
 -GET /filter/place              RESTITUISCE UN JSONOBJECT CONTENENTE I DATI DEL TWEET NEL LUOGO INSERITO 
 -GET /distance                  RESTITUISCE LA DISTANZA 
--GET /number 
--GET /maxemin
+-GET /number                    RESTITUISCE IL NUMERO DI TWEET
+-GET /maxemin                   RESTITUISCE
 ____________________________________________
 
 METADATI
@@ -22,7 +22,7 @@ METADATI
 
 
 
-
+Esempio dei metadati riguardanti i dati geo di tweet
 ____________________________________________
 ECCEZIONI
 Le eccezioni personalizzate sono le seguenti: 
@@ -30,3 +30,8 @@ Le eccezioni personalizzate sono le seguenti:
                 restituisce un messaggio di errore { "Data non presente nel tweet" }
 -PLACEEXCEPTION: viene lanciata se il luogo non viene specificato nel tweet 
                  restituisce un messaggio di errore { "Luogo non presente nel tweet"}
+_____________________________________________
+
+
+
+
