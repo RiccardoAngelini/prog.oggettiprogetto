@@ -8,9 +8,9 @@ import com.example.demoSpring.Model.GeoTweet;
 import com.example.demoSpring.Utility.Distance;
 import com.example.demoSpring.Utility.GetCoordinates;
 
-public class DistanceFilter implements Filter{
+public class DistanceFilter {
  
-	GetCoordinates coord= new GetCoordinates();
+	/*GetCoordinates coord= new GetCoordinates();
 	Distance distance= new Distance();
 	GenericTweet generictweet;
 	String input;
@@ -42,4 +42,6 @@ public class DistanceFilter implements Filter{
 		
 	}
 	
+}
+*/
 }

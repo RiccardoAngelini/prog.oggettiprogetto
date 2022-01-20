@@ -17,7 +17,7 @@ public class GeoTweet {
 	 */
  
 	
-     Vector<Double> coord= new Vector<Double>(); 
+     private String coord ; 
       private String type;
       
       /**
@@ -47,7 +47,7 @@ public class GeoTweet {
        * @return coord
        */
 	
-	public Vector<Double> getCoord() {
+	public String getCoord() {
 		return coord;
 	}
 
@@ -66,7 +66,7 @@ public class GeoTweet {
 	}
 
 
-	public void setCoord(Vector<Double> coord) {
+	public void setCoord(String coord) {
 		this.coord = coord;
 	}
 

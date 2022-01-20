@@ -126,8 +126,9 @@ public class TweetServiceImpl implements TweetService {
 
 		JSONObject geo = new JSONObject(); 
 		GeoTweet geotweet= new GeoTweet(); 
-		Vector<Double> coord = (Vector<Double>) geo.get("coordinates");
-		geotweet.setCoord(coord);  
+		
+		geotweet.setCoord((String)geo.get("coordinates"));
+		
 		geotweet.setType((String)geo.get("type"));
 
 		geolocal.add(geotweet);  

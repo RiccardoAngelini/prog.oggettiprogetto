@@ -34,7 +34,9 @@ public class UrlGenerator  {
 			
 			url+=("&count"+ count); 
 			
-			url+=("&#travel"+hashtag); 
+			url+=("&q="+hashtag);
+			
+			
 			
 			return url;
 		}
